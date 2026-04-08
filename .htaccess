@@ -1,0 +1,79 @@
+# Prevent directory listing
+Options -Indexes
+
+# Block .env and environment files
+<FilesMatch "^\.env">
+Require all denied
+</FilesMatch>
+
+# Block hidden files (.git, .htaccess etc)
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Block sensitive backend files (DO NOT block index.php)
+<FilesMatch "^(artisan|composer\.json|composer\.lock|package\.json|webpack\.mix\.js)$">
+Require all denied
+</FilesMatch>
+
+# Force HTTPS
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.\*)$ https://www.highoctane777.com/ [L,R=301]
+# RewriteRule ^ https://www.highoctane777.com%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block sensitive file types
+    RewriteRule \.(env|log|ini|bak|sql|conf|yml|json|lock)$ - [F,L]
+
+    # Block composer files
+    RewriteRule ^composer\.(json|lock)$ - [F,L]
+
+    # Block node files
+    RewriteRule ^package\.json - [F,L]
+
+    # Block debug files
+    RewriteRule ^phpinfo\.php - [F,L]
+
+    # Block suspicious query strings
+    RewriteCond %{QUERY_STRING} (\.\.\/|\<|\>|\'|\") [NC]
+    RewriteRule .* - [F,L]
+
+    # Block bad bots
+    RewriteCond %{HTTP_USER_AGENT} (curl|wget|python|nikto|sqlmap|scanner) [NC]
+    RewriteRule .* - [F,L]
+
+    # Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+</IfModule>
+
+# Security Headers
+<IfModule mod_headers.c>
+Header set X-Content-Type-Options "nosniff"
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>

@@ -1,0 +1,140 @@
+.store-section,
+.contactonline,
+#gallery {
+    background-color: #ffffff;
+    color: black;
+}
+.store-content h3 {
+    color: var(--theme-txt-clr);
+    font-weight: 700;
+    line-height: 1.3;
+}
+/* .homecontact-items a {
+    color: #000000 !important;
+} */
+.onlinecontact-items a {
+    color: #000000 !important;
+}
+.homecontact-form .form-control {
+    padding: 10px 20px;
+}
+.homecontact-form label,
+.paymentform label.error {
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 15px;
+    color: red;
+    font-weight: 500;
+}
+.policy-dtls-content {
+    margin: 0 auto;
+}
+.policy-dtls-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+.policy-dtls-content h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+.policy-dtls-content ul li {
+    margin-bottom: 10px;
+}
+.policy-dtls-content ul {
+    list-style: circle;
+    margin-left: 20px;
+    margin-bottom: 16px;
+}
+.footerlogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.terms a {
+    line-height: 1.5 !important;
+}
+.icofont-long-arrow-right:before {
+    color: var(--theme-txt-clr);
+    margin-right: 5px;
+    padding-top: 5px;
+}
+.about-hero-content .content ul li div {
+    display: flex;
+}
+.dropdown-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ea0046;
+    font-size: 25px;
+}
+
+.custom-dropdown {
+    position: relative;
+    width: 260px;
+    margin: auto;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.dropdown-selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 0px 18px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.dropdown-selected:hover {
+    border-color: #ea0046;
+}
+
+/* ✅ ICON */
+.dropdown-icon {
+    font-size: 35px;
+    transition: transform 0.3s ease;
+}
+
+/* rotate when open */
+.custom-dropdown.open .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-options {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.dropdown-item {
+    padding: 12px 18px;
+    transition: 0.2s;
+}
+
+.dropdown-item:hover {
+    background: #f5f5f5;
+}
+
+.dropdown-item.active {
+    background: #ea0046;
+    color: #fff;
+    font-weight: 600;
+}
+
+.custom-dropdown.open .dropdown-options {
+    display: block;
+}

@@ -1,0 +1,7 @@
+user-agent: *
+disallow: /*
+disallow: /admin/*
+disallow: /admin
+disallow: /admin/login*
+disallow: /admin/login
+sitemap: https://www.highoctane777.com/sitemap.xml

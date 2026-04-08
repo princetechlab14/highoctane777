@@ -1,0 +1,53 @@
+.error {
+    color: red;
+}
+
+/* page */
+.portlet.box.green {
+    border: 1px solid #5d87ff;
+    margin-bottom: 10px;
+}
+
+.portlet.box.blue-hoki {
+    border: 1px solid #5d87ff;
+    background: #5d87ff;
+    margin-bottom: 20px;
+}
+
+.portlet-title {
+    display: flex;
+    justify-content: space-between;
+    background: #5d87ff;
+    align-items: center;
+    min-height: 45px;
+}
+
+.portlet-title .actions {
+    padding: 0 !important
+}
+
+.portlet-title .caption {
+    color: #fff;
+}
+
+.portlet.light .portlet-body {
+    padding-top: 8px;
+}
+
+.portlet.box>.portlet-body {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.portlet>.portlet-title>.caption>i {
+    float: left;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* end page */
+.no-notification.dropdown-item:hover, .no-notification:hover h6 {
+    color: var(--bs-heading-color) !important;
+    background-color: #fff;
+}
