@@ -4467,6 +4467,11 @@ class admin extends Controller
     // -------------------------------- withdrawals module -------------------------------------------------------------------
     public function withdrawals(Request $request, $id = 0)
     {
+        $user = session('admin');
+        if (!$user) {
+            return redirect('/admin/login');
+        }
+
         if ($request->isMethod('post')) {
             $action = $id == 0 ? 'can_create' : 'can_edit';
             // 🔥 Check permission
@@ -4488,7 +4493,7 @@ class admin extends Controller
                 return redirect()->back()->withInput();
             }
 
-            $dbUser = user::find($user->id);
+            $dbUser = users::find($user->id);
             $tz = session('admin_timezone', config('app.timezone'));
 
             $insert = array(
@@ -4524,7 +4529,7 @@ class admin extends Controller
                 //     }
 
                 //     // ✅ Adjust used amount
-                //     user::where('id', $user->id)->increment('used_payout_amount', $difference);
+                //     users::where('id', $user->id)->increment('used_payout_amount', $difference);
                 // }
                 
                 withdrawals::where('id', $id)->update($insert);
@@ -4544,7 +4549,7 @@ class admin extends Controller
 
                 // // ✅ Update used amount
                 // if ($user->user_type != 'super_admin') {
-                //     user::where('id', $user->id)->increment('used_payout_amount', $data['amount']);
+                //     users::where('id', $user->id)->increment('used_payout_amount', $data['amount']);
                 // }
 
                 $this->flashmessage('Withdrawal Inserted Successfully', 0);
