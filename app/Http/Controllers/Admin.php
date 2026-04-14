@@ -3161,7 +3161,7 @@ class admin extends Controller
                 $transaction->customer_mobile,
                 $transaction->customer_username,
                 $transaction->platform ? $transaction->platform->name : '-',
-                $transaction->created_at ? date('d-m-Y H:i a', strtotime($transaction->created_at)) : "-",
+                $transaction->updated_at ? date('d-m-Y H:i a', strtotime($transaction->updated_at)) : "-",
                 // $actionBtn . ' ' . $transferBtn,
             ];
         }
