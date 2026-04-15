@@ -104,6 +104,7 @@ class PaymentController extends Controller
 
         $formattedAmount = number_format((float)$request->amount, 2, '.', '');  // Format to 2 decimal
         $amount = (int) round($formattedAmount * 100);  // Convert to paisa/cents
+        $expiresAt = Carbon::now()->addMinutes(30)->timestamp; // keep checkout link valid longer
 
         try {
             $session = StripeSession::create([
@@ -138,6 +139,7 @@ class PaymentController extends Controller
                 //     'enabled' => true,
                 // ],
                 'mode' => 'payment',
+                'expires_at' => $expiresAt,
                 'allow_promotion_codes' => true,
                 'payment_intent_data' => [
                     'metadata' => [
