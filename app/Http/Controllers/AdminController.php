@@ -56,7 +56,7 @@ use Config;
 use Mail;
 use PDF;
 
-class admin extends Controller
+class AdminController extends Controller
 {
     private function checkPermission($feature, $action)
     {

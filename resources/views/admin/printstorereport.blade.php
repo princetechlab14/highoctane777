@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style type="text/css">
-
         tr {
             margin: 0 !important;
             padding: 0;
@@ -79,8 +78,9 @@
                             <td style="word-break: break-all;">{{ $value->customer_email }}</td>
                             <td>{{ $value->customer_mobile }}</td>
                             <td>{{ $value->customer_username }}</td>
-                            <td>{{ $value->platform ? $value->platform->name : '-', }}</td>
-                            <td>{{ $value->created_at ? date('d-m-Y H:i a', strtotime($value->created_at)) : '-' }}</td>
+                            <td>{{ $value->platform ? $value->platform->name : '-' }}</td>
+                            <td>{{ $value->created_at ? date('d-m-Y H:i a', strtotime($value->created_at)) : '-' }}
+                            </td>
                         </tr>
                     @endforeach
                     <tr>

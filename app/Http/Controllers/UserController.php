@@ -25,7 +25,7 @@ use Request;
 use Config;
 use Mail;
 
-class User extends Controller
+class UserController extends Controller
 {
     public function index($url = '', $id = 0)
     {

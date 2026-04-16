@@ -3,7 +3,7 @@
     <!-- Contact Area Start Here -->
     <section class="contact-area s-py-100 position-relative">
         <div class="bg background-img">
-            <img class="left-right" src="{{ asset('public/Assets') }}/Admin/images/page/{{ $page->image ?? 'noimage.webp' }}"
+            <img class="left-right" src="{{ asset('Assets') }}/Admin/images/page/{{ $page->image ?? 'noimage.webp' }}"
                 alt="Contact Us" title="Contact Us" loading="lazy">
         </div>
         <div class="container">
