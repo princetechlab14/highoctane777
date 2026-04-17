@@ -79,8 +79,8 @@
                                                     </td>
                                                     <td>
                                                         <a target='_blank'
-                                                            href="{{ $value->category_image != '' ? asset('public/Assets/Admin/images/category/' . $value->category_image) : asset('public/Assets/Admin/images/category/noimage.webp') }}">
-                                                            <img src="{{ asset('public/Assets') }}/Admin/images/category/thumbnails/{{ $value->category_image != '' ? $value->category_image : 'noimage.webp' }}"
+                                                            href="{{ $value->category_image != '' ? asset('assets/admin/images/category/' . $value->category_image) : asset('assets/admin/images/category/noimage.webp') }}">
+                                                            <img src="{{ asset('assets') }}/admin/images/category/thumbnails/{{ $value->category_image != '' ? $value->category_image : 'noimage.webp' }}"
                                                                 alt="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->category_image != '' ? $value->category_image : 'noimage.webp')) }}"
                                                                 title="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->category_image != '' ? $value->category_image : 'noimage.webp')) }}"
                                                                 height="80px" loading="lazy">
@@ -811,9 +811,9 @@
                 method: 'GET',
                 success: function(response) {
                     let imageUrl = response.category_image && response.category_image !== '' ?
-                        "{{ asset('public/Assets') }}/Admin/images/category/" + response
+                        "{{ asset('assets') }}/admin/images/category/" + response
                         .category_image :
-                        "{{ asset('public/Assets') }}/Admin/images/category/noimage.webp";
+                        "{{ asset('assets') }}/admin/images/category/noimage.webp";
                     $('.categoryimage').attr('src', imageUrl);
                     $('#editp_c_id').val(response.p_c_id).trigger('change');
                     $('#editcategoryform input[name="category_name"]').val(response.category_name);

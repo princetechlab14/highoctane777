@@ -71,7 +71,7 @@
                                                             <div class="fileinput-preview img-thumbnail"
                                                                 data-trigger="fileinput"
                                                                 style="width: 200px; height: 150px;">
-                                                                <img src="{{ asset('public/Assets') }}/Admin/images/profile/{{ $userdata->p_image ? $userdata->p_image : 'user.webp' }}"
+                                                                <img src="{{ asset('assets') }}/admin/images/profile/{{ $userdata->p_image ? $userdata->p_image : 'user.webp' }}"
                                                                     alt="Profile" title="Profile"
                                                                     class="img-fluid rounded-circle" width="120"
                                                                     height="120">
@@ -232,7 +232,7 @@
 
             if (input && countryCodeInput) {
                 const iti = window.intlTelInput(input, {
-                    utilsScript: "{{ asset('public/Assets') }}/Admin/js/forms/utils.js",
+                    utilsScript: "{{ asset('assets') }}/admin/js/forms/utils.js",
                     initialCountry: "auto", // Automatically set the initial country based on user's location
                     separateDialCode: true,
                     geoIpLookup: function(callback) {

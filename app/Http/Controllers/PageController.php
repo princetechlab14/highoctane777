@@ -39,7 +39,7 @@ class PageController extends Controller
         if ($thumbnail == 1) {
             if ($request->hasFile($name)) {
                 $img = $request->file($name);
-                $destinationPath = public_path('/Assets/Admin/' . $path . '/thumbnails');
+                $destinationPath = public_path('/assets/admin/' . $path . '/thumbnails');
                 if (is_array($img)) {
                     foreach ($img as $key => $val1) {
                         if (is_array($val1) && count($val1) > 0) {
@@ -74,7 +74,7 @@ class PageController extends Controller
             $file = [];
             $image = $request->file($name);
             if (is_array($image)) {
-                $path = public_path('/Assets/Admin/' . $path);
+                $path = public_path('/assets/admin/' . $path);
                 foreach ($image as $key => $val) {
                     if (is_array($val) && count($val) > 0) {
                         foreach ($val as $vk => $vv) {
@@ -94,7 +94,7 @@ class PageController extends Controller
 
                 }
             } else {
-                $path = public_path('/Assets/Admin/' . $path);
+                $path = public_path('/assets/admin/' . $path);
                 $filename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME) . "_" . $randString . ".webp";
                 $filename = preg_replace('/[^a-z0-9\.]/i', "-", $filename);
                 $filename = str_replace(' ', '-', $filename);
@@ -173,7 +173,7 @@ class PageController extends Controller
                             page_content::create($content);
                         }
                     }
-                    $path = public_path('/Assets/Admin/images/page');
+                    $path = public_path('/assets/admin/images/page');
                     $randString = substr(str_shuffle(str_repeat($x = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(10 / strlen($x)))), 1, 10);
                     if ($request->file('content_image')) {
                         $image = $request->file('content_image');
@@ -222,8 +222,8 @@ class PageController extends Controller
                 if (isset($main_image[0])) {
                     $newImage = $main_image[0];
                     if (!empty($pageRecord->image)) {
-                        $oldImagePath = public_path('/Assets/Admin/images/page/' . $pageRecord->image);
-                        $oldThumbnailPath = public_path('/Assets/Admin/images/page/thumbnails/' . $pageRecord->image);
+                        $oldImagePath = public_path('/assets/admin/images/page/' . $pageRecord->image);
+                        $oldThumbnailPath = public_path('/assets/admin/images/page/thumbnails/' . $pageRecord->image);
 
                         // Delete old images if they exist
                         if (file_exists($oldImagePath)) {
@@ -293,7 +293,7 @@ class PageController extends Controller
                     }
 
                     //image
-                    $path = public_path('/Assets/Admin/images/page');
+                    $path = public_path('/assets/admin/images/page');
                     $randString = substr(str_shuffle(str_repeat($x = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(10 / strlen($x)))), 1, 10);
                     if ($request->file('content_image')) {
                         $image = $request->file('content_image');
@@ -479,8 +479,8 @@ class PageController extends Controller
 
                 $history = '<a href="' . url($value->url) . '" class="link-primary link-offset-2" target="_blank">' . $value->title . '</a>';
 
-                $img = '<a target="_blank" href="' . asset('public/Assets/Admin/images/page') . '/' . ($value->image != '' ? $value->image : 'noimage.webp') . '">
-                            <img src="' . asset('public/Assets/Admin/images/page/thumbnails') . '/' . ($value->image != '' ? $value->image : 'noimage.webp') . '" height="80" loading="lazy">
+                $img = '<a target="_blank" href="' . asset('/assets/admin/images/page') . '/' . ($value->image != '' ? $value->image : 'noimage.webp') . '">
+                            <img src="' . asset('/assets/admin/images/page/thumbnails') . '/' . ($value->image != '' ? $value->image : 'noimage.webp') . '" height="80" loading="lazy">
                         </a>';
 
                 $newarr[] = array(

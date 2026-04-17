@@ -139,7 +139,7 @@ class AuthController extends Controller
                 $attach = email_attachment::where('e_id', 2)->get();
                 $attachment = array();
                 foreach ($attach as $v) {
-                    $attachment[] = public_path('/Assets/Admin/EmailAttachments/' . $v->file);
+                    $attachment[] = public_path('/assets/admin/EmailAttachments/' . $v->file);
                 }
                 $subject = str_replace(array('{website_name}',), array($websetting->website_name,), $template->subject);
                 $message = str_replace(array('{website_name}', '{token}'), array($websetting->website_name, $data['token']), $template->message);
@@ -206,7 +206,7 @@ class AuthController extends Controller
             if ($request->hasFile('profile_pic')) {
                 $image = $request->file('profile_pic');
                 $filename = 'profile_' . time() . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('/Assets/Admin/images/profile/'), $filename);
+                $image->move(public_path('/assets/admin/images/profile/'), $filename);
                 $update['profile_pic'] = $filename;
             }
             $update['name'] = $data['name'];

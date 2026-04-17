@@ -1,42 +1,42 @@
 </div>
 
-<script src="{{ asset('public/Assets') }}/Admin/js/vendor.min.js"></script>
+<script src="{{ asset('assets') }}/admin/js/vendor.min.js"></script>
 <!-- Import Js Files -->
-<script src="{{ asset('public/Assets') }}/Admin/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="{{ asset('public/Assets') }}/Admin/libs/simplebar/dist/simplebar.min.js"></script>
-<script src="{{ asset('public/Assets') }}/Admin/js/theme/app.init.js"></script>
-<script src="{{ asset('public/Assets') }}/Admin/js/theme/theme.js"></script>
-<script src="{{ asset('public/Assets') }}/Admin/js/theme/app.min.js"></script>
-<script src="{{ asset('public/Assets') }}/Admin/js/theme/sidebarmenu.js"></script>
+<script src="{{ asset('assets') }}/admin/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('assets') }}/admin/libs/simplebar/dist/simplebar.min.js"></script>
+<script src="{{ asset('assets') }}/admin/js/theme/app.init.js"></script>
+<script src="{{ asset('assets') }}/admin/js/theme/theme.js"></script>
+<script src="{{ asset('assets') }}/admin/js/theme/app.min.js"></script>
+<script src="{{ asset('assets') }}/admin/js/theme/sidebarmenu.js"></script>
 <!-- solar icons -->
 <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-<script src="{{ asset('public/Assets') }}/Admin/js/theme/app.horizontal.init.js"></script>
+<script src="{{ asset('assets') }}/admin/js/theme/app.horizontal.init.js"></script>
 <!-- datatable JS  -->
-<script src="{{ asset('public/Assets') }}/Admin/libs/datatable/js/datatables.min.js"></script>
+<script src="{{ asset('assets') }}/admin/libs/datatable/js/datatables.min.js"></script>
 <!-- date picker  -->
-<script src="{{ asset('public/Assets') }}/Admin/js/extra-libs/moment/moment.min.js"></script>
-<script src="{{ asset('public/Assets') }}/Admin/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js">
+<script src="{{ asset('assets') }}/admin/js/extra-libs/moment/moment.min.js"></script>
+<script src="{{ asset('assets') }}/admin/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js">
 </script>
-<script src="{{ asset('public/Assets') }}/Admin/js/forms/datepicker-init.js"></script>
-<script src="{{ asset('public/Assets') }}/Admin/libs/daterangepicker/daterangepicker.js"></script>
+<script src="{{ asset('assets') }}/admin/js/forms/datepicker-init.js"></script>
+<script src="{{ asset('assets') }}/admin/libs/daterangepicker/daterangepicker.js"></script>
 <!-- jquery-validation -->
-<script src="{{ asset('public/Assets') }}/Admin/libs/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="{{ asset('assets') }}/admin/libs/jquery-validation/dist/jquery.validate.min.js"></script>
 <!-- toastr  -->
-<script src="{{ asset('public/Assets') }}/Admin/js/plugins/toastr-init.js"></script>
+<script src="{{ asset('assets') }}/admin/js/plugins/toastr-init.js"></script>
 <!-- fileinput  -->
-<script src="{{ asset('public/Assets') }}/Admin/libs/bootstrap-fileinput/bootstrap-fileinput.js"></script>
+<script src="{{ asset('assets') }}/admin/libs/bootstrap-fileinput/bootstrap-fileinput.js"></script>
 <!-- sweetalert -->
-<script src="{{ asset('public/Assets') }}/Admin/libs/sweetalert2/dist/sweetalert2.min.js"></script>
+<script src="{{ asset('assets') }}/admin/libs/sweetalert2/dist/sweetalert2.min.js"></script>
 <!-- CKeditor -->
-<script src="{{ asset('public/Assets') }}/Admin/libs/ckeditor/ckeditor.js" type="text/javascript"></script>
+<script src="{{ asset('assets') }}/admin/libs/ckeditor/ckeditor.js" type="text/javascript"></script>
 <!-- Form-wizard -->
-<script src="{{ asset('public/Assets') }}/Admin/libs/jquery-steps/build/jquery.steps.min.js"></script>
+<script src="{{ asset('assets') }}/admin/libs/jquery-steps/build/jquery.steps.min.js"></script>
 <!-- form repeater -->
-<script src="{{ asset('public/Assets') }}/Admin/libs/jquery.repeater/jquery.repeater.min.js"></script>
+<script src="{{ asset('assets') }}/admin/libs/jquery.repeater/jquery.repeater.min.js"></script>
 <!-- select2  -->
-<script src="{{ asset('public/Assets') }}/Admin/libs/select2/js/select2.min.js"></script>
+<script src="{{ asset('assets') }}/admin/libs/select2/js/select2.min.js"></script>
 <!-- intlTelInput -->
-<script src="{{ asset('public/Assets') }}/Admin/js/forms/intlTelInput.min.js"></script>
+<script src="{{ asset('assets') }}/admin/js/forms/intlTelInput.min.js"></script>
 
 <script>
     toastr.options = {

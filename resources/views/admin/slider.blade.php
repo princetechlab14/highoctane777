@@ -67,8 +67,8 @@
                                                     </td>
                                                     <td>
                                                         <a target='_blank'
-                                                            href="{{ asset('public/Assets/Admin/images/slider/' . $value->banner_image) }}">
-                                                            <img src="{{ asset('public/Assets') }}/Admin/images/slider/thumbnails/{{ $value->banner_image }}"
+                                                            href="{{ asset('assets/admin/images/slider/' . $value->banner_image) }}">
+                                                            <img src="{{ asset('assets') }}/admin/images/slider/thumbnails/{{ $value->banner_image }}"
                                                                 alt="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->banner_image)) }}"
                                                                 title="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->banner_image)) }}"
                                                                 height="80px" loading="lazy">
@@ -642,7 +642,7 @@
                 method: 'GET',
                 dataType: 'json',
                 success: function(response) {
-                    $('.bannerimage').attr('src', "{{ asset('public/Assets') }}/Admin/images/slider/" +
+                    $('.bannerimage').attr('src', "{{ asset('assets') }}/admin/images/slider/" +
                         response.banner_image);
                     $('#editsliderform input[name="image_title"]').val(response.image_title);
                     $('#editsliderform input[name="image_alt"]').val(response.image_alt);

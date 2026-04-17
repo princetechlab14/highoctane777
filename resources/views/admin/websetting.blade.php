@@ -70,7 +70,7 @@
                                                     <div class="fileinput-preview img-thumbnail" data-trigger="fileinput"
                                                         style="width: 200px; height: 150px;">
                                                         <img
-                                                            src="{{ asset('public/Assets') }}/{{ isset($websetting->hlogo) && $websetting->hlogo != '' ? $websetting->hlogo : 'user.webp' }}">
+                                                            src="{{ asset('assets') }}/{{ isset($websetting->hlogo) && $websetting->hlogo != '' ? $websetting->hlogo : 'user.webp' }}">
                                                     </div>
                                                     <div>
                                                         <span class="btn btn-outline-primary btn-file">
@@ -91,7 +91,7 @@
                                                     <div class="fileinput-preview img-thumbnail" data-trigger="fileinput"
                                                         style="width: 200px; height: 150px;">
                                                         <img
-                                                            src="{{ asset('public/Assets') }}/{{ isset($websetting->flogo) && $websetting->flogo != '' ? $websetting->flogo : 'user.webp' }}">
+                                                            src="{{ asset('assets') }}/{{ isset($websetting->flogo) && $websetting->flogo != '' ? $websetting->flogo : 'user.webp' }}">
                                                     </div>
                                                     <div>
                                                         <span class="btn btn-outline-primary btn-file">
@@ -112,7 +112,7 @@
                                                     <div class="fileinput-preview img-thumbnail" data-trigger="fileinput"
                                                         style="width: 200px; height: 150px;">
                                                         <img
-                                                            src="{{ asset('public/Assets') }}/{{ isset($websetting->favicon) && $websetting->favicon != '' ? $websetting->favicon : 'user.webp' }}">
+                                                            src="{{ asset('assets') }}/{{ isset($websetting->favicon) && $websetting->favicon != '' ? $websetting->favicon : 'user.webp' }}">
                                                     </div>
                                                     <div>
                                                         <span class="btn btn-outline-primary btn-file">
@@ -588,7 +588,7 @@
                 const countryCodeInput = $(input).closest('.row').find('.country_code');
 
                 const iti = window.intlTelInput(input, {
-                    utilsScript: "{{ asset('public/Assets') }}/Admin/js/forms/utils.js",
+                    utilsScript: "{{ asset('assets') }}/admin/js/forms/utils.js",
                     initialCountry: "auto",
                     separateDialCode: true,
                     geoIpLookup: function(callback) {

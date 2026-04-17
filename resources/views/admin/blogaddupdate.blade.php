@@ -78,7 +78,7 @@
                                                                 style="width: 200px; height: 150px;">
                                                                 @if (isset($fetchblogdata))
                                                                     <img
-                                                                        src="{{ asset('public/Assets') }}/Admin/images/blog/{{ $fetchblogdata->image != '' ? $fetchblogdata->image : 'noimage.webp' }}">
+                                                                        src="{{ asset('assets') }}/admin/images/blog/{{ $fetchblogdata->image != '' ? $fetchblogdata->image : 'noimage.webp' }}">
                                                                 @endif
                                                             </div>
                                                             <div class="editblogimg-error-msg">
@@ -249,7 +249,7 @@
                                                                                                 data-trigger="fileinput"
                                                                                                 style="width: 200px; height: 150px;">
                                                                                                 <img
-                                                                                                    src="{{ asset('public/Assets/Admin/images/blog/' . ($cv->content_image != '' ? $cv->content_image : 'noimage.webp')) }}">
+                                                                                                    src="{{ asset('assets/admin/images/blog/' . ($cv->content_image != '' ? $cv->content_image : 'noimage.webp')) }}">
 
                                                                                             </div>
                                                                                             <div>

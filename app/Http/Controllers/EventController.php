@@ -41,7 +41,7 @@ class EventController extends Controller
         if ($thumbnail == 1) {
             if ($request->hasFile($name)) {
                 $img = $request->file($name);
-                $destinationPath = public_path('/Assets/Admin/' . $path . '/thumbnails');
+                $destinationPath = public_path('/assets/admin/' . $path . '/thumbnails');
                 if (is_array($img)) {
                     foreach ($img as $key => $val1) {
                         if (is_array($val1) && count($val1) > 0) {
@@ -76,7 +76,7 @@ class EventController extends Controller
             $file = [];
             $image = $request->file($name);
             if (is_array($image)) {
-                $path = public_path('/Assets/Admin/' . $path);
+                $path = public_path('/assets/admin/' . $path);
                 foreach ($image as $key => $val) {
                     if (is_array($val) && count($val) > 0) {
                         foreach ($val as $vk => $vv) {
@@ -95,7 +95,7 @@ class EventController extends Controller
                     }
                 }
             } else {
-                $path = public_path('/Assets/Admin/' . $path);
+                $path = public_path('/assets/admin/' . $path);
                 $filename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME) . "_" . $randString . ".webp";
                 $filename = preg_replace('/[^a-z0-9\.]/i', "-", $filename);
                 $filename = str_replace(' ', '-', $filename);

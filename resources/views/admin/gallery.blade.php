@@ -61,8 +61,8 @@
                                                     </td>
                                                     <td>
                                                         <a target='_blank'
-                                                            href="{{ asset('public/Assets/Admin/images/gallery/' . $value->g_image) }}">
-                                                            <img src="{{ asset('public/Assets') }}/Admin/images/gallery/thumbnails/{{ $value->g_image }}"
+                                                            href="{{ asset('assets/admin/images/gallery/' . $value->g_image) }}">
+                                                            <img src="{{ asset('assets') }}/admin/images/gallery/thumbnails/{{ $value->g_image }}"
                                                                 alt="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->g_image)) }}"
                                                                 title="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->g_image)) }}"
                                                                 height="80px" loading="lazy">
@@ -521,7 +521,7 @@
                 method: 'GET',
                 dataType: 'json',
                 success: function(response) {
-                    $('.gimage').attr('src', "{{ asset('public/Assets') }}/Admin/images/gallery/" +
+                    $('.gimage').attr('src', "{{ asset('assets') }}/admin/images/gallery/" +
                         response.g_image);
                 }
             });

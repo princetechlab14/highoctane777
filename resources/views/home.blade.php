@@ -3,7 +3,7 @@
     <!-- Hero Area Start Here -->
     <section class="home-v1-hero-area position-relative" id="hero">
         <div class="bg">
-            <img src="{{ asset('public/Assets/Admin') }}/images/page/{{ $page->image ?? '' }}" alt="Hero" title="Hero"
+            <img src="{{ asset('assets/admin') }}/images/page/{{ $page->image ?? '' }}" alt="Hero" title="Hero"
                 loading="eager" fetchpriority="high">
         </div>
         <div class="container">
@@ -31,7 +31,7 @@
     @if (isset($page->page_section[0]))
         <section class="home-v1-about-area s-py-100" id="about">
             <div class="shape">
-                <img src="{{ asset('public/Assets/User') }}/img/shape/line-shape.png" alt="shape" title="shape"
+                <img src="{{ asset('assets/user') }}/img/shape/line-shape.png" alt="shape" title="shape"
                     loading="lazy">
             </div>
             <div class="container">
@@ -41,8 +41,8 @@
                             @php
                                 $img = $page->page_section[0]->page_content[1]->content_image ?? null;
                                 $imgPath = $img
-                                    ? asset('public/Assets/Admin/images/page/' . $img)
-                                    : asset('public/Assets/User/img/thumb/about-hero.jpg');
+                                    ? asset('assets/admin/images/page/' . $img)
+                                    : asset('assets/user/img/thumb/about-hero.jpg');
                             @endphp
                             <img src="{{ $imgPath }}" alt="About Our Store" title="About Our Store" loading="lazy">
                         @endif
@@ -122,7 +122,7 @@
                                 <!-- LEFT SIDE : QR + BUTTON -->
                                 <div class="col-md-6 col-lg-5 text-center">
                                     @if ($store->qr_code)
-                                        <img src="{{ asset('public/Assets/Admin/images/qrcode/' . $store->qr_code) }}"
+                                        <img src="{{ asset('assets/admin/images/qrcode/' . $store->qr_code) }}"
                                             alt="{{ $store->name }} QR Code" class="img-fluid rounded" loading="lazy">
 
                                         <p class="fw-semibold mb-2">Scan QR Code</p>
@@ -233,17 +233,17 @@
                                     <!-- STORE IMAGE -->
                                     <div class="col-lg-4 col-md-12 text-center">
                                         @if ($store->store_image)
-                                            <img src="{{ asset('public/Assets/Admin/images/store/' . $store->store_image) }}"
+                                            <img src="{{ asset('assets/admin/images/store/' . $store->store_image) }}"
                                                 class="img-fluid rounded-3 mb-3" alt="{{ $store->name }}" loading="lazy">
                                         @else
-                                            <img src="{{ asset('public/Assets/User/img/default-store.jpg') }}"
+                                            <img src="{{ asset('assets/user/img/default-store.jpg') }}"
                                                 class="img-fluid rounded-3 mb-3" alt="Store Image" loading="lazy">
                                         @endif
                                     </div>
 
                                     <div class="col-lg-3 col-md-6 text-center">
                                         @if ($store->qr_code)
-                                            <img src="{{ asset('public/Assets/Admin/images/qrcode/' . $store->qr_code) }}"
+                                            <img src="{{ asset('assets/admin/images/qrcode/' . $store->qr_code) }}"
                                                 class="img-fluid rounded mb-2" alt="{{ $store->name }} QR" loading="lazy">
 
                                             <p class="fw-semibold">Scan QR</p>
@@ -357,10 +357,10 @@
                                 <div class="col-lg-6 text-center">
                                     <div class="store-image">
                                         @if ($store->store_image)
-                                            <img src="{{ asset('public/Assets/Admin/images/store/' . $store->store_image) }}"
+                                            <img src="{{ asset('assets/admin/images/store/' . $store->store_image) }}"
                                                 class="img-fluid rounded" alt="{{ $store->name }}" loading="lazy">
                                         @else
-                                            <img src="{{ asset('public/Assets/User/img/default-store.jpg') }}"
+                                            <img src="{{ asset('assets/user/img/default-store.jpg') }}"
                                                 class="img-fluid rounded" alt="Store Image" loading="lazy">
                                         @endif
                                     </div>
@@ -405,7 +405,7 @@
                                         <!-- QR + PAY -->
                                         <div class="store-payment d-lg-flex align-items-lg-center d-md-flex align-items-md-center gap-4 text-center">
                                             @if ($store->qr_code)
-                                                <img src="{{ asset('public/Assets/Admin/images/qrcode/' . $store->qr_code) }}"
+                                                <img src="{{ asset('assets/admin/images/qrcode/' . $store->qr_code) }}"
                                                     class="qr-img" alt="QR Code" loading="lazy">
                                             @endif
 
@@ -503,10 +503,10 @@
                                     <!-- STORE IMAGE -->
                                     <div class="col-lg-4 col-md-12 text-center">
                                         @if ($store->store_image)
-                                            <img src="{{ asset('public/Assets/Admin/images/store/' . $store->store_image) }}"
+                                            <img src="{{ asset('assets/admin/images/store/' . $store->store_image) }}"
                                                 class="img-fluid rounded-3 mb-3" alt="{{ $store->name }}" loading="lazy">
                                         @else
-                                            <img src="{{ asset('public/Assets/User/img/default-store.jpg') }}"
+                                            <img src="{{ asset('assets/user/img/default-store.jpg') }}"
                                                 class="img-fluid rounded-3 mb-3" alt="Store Image" loading="lazy">
                                         @endif
                                     </div>
@@ -514,7 +514,7 @@
                                     <!-- QR CODE -->
                                     <div class="col-lg-3 col-md-6 text-center">
                                         @if ($store->qr_code)
-                                            <img src="{{ asset('public/Assets/Admin/images/qrcode/' . $store->qr_code) }}"
+                                            <img src="{{ asset('assets/admin/images/qrcode/' . $store->qr_code) }}"
                                                 class="img-fluid rounded mb-2" alt="{{ $store->name }} QR" loading="lazy">
 
                                             <p class="fw-semibold">Scan QR</p>
@@ -634,7 +634,7 @@
                         <div class="gamelist-item">
                             <div class="gamelist-single-item mb-50 mb-md-30 mb-xs-20">
                                 <div class="">
-                                    <img src="{{ asset('public/Assets/Admin/images/gallery/' . ($item->g_image ?? 'noimage.webp')) }}"
+                                    <img src="{{ asset('assets/admin/images/gallery/' . ($item->g_image ?? 'noimage.webp')) }}"
                                         alt="gamelist">
                                 </div>
                             </div>
@@ -643,7 +643,7 @@
                     {{-- <div class="gamelist-item">
                     <div class="gamelist-single-item mb-50 mb-md-30 mb-xs-20">
                         <div class="">
-                            <img src="{{ asset('public/Assets/User/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (2).jpeg') }}"
+                            <img src="{{ asset('assets/user/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (2).jpeg') }}"
                                 alt="gamelist">
                         </div>
                     </div>
@@ -651,7 +651,7 @@
                 <div class="gamelist-item">
                     <div class="gamelist-single-item mb-50 mb-md-30 mb-xs-20">
                         <div class="">
-                            <img src="{{ asset('public/Assets/User/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (1).jpeg') }}"
+                            <img src="{{ asset('assets/user/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (1).jpeg') }}"
                                 alt="gamelist">
                         </div>
                     </div>
@@ -659,7 +659,7 @@
                 <div class="gamelist-item">
                     <div class="gamelist-single-item mb-50 mb-md-30 mb-xs-20">
                         <div class="">
-                            <img src="{{ asset('public/Assets/User/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (1).jpeg') }}"
+                            <img src="{{ asset('assets/user/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (1).jpeg') }}"
                                 alt="gamelist">
                         </div>
                     </div>
@@ -667,7 +667,7 @@
                 <div class="gamelist-item">
                     <div class="gamelist-single-item mb-50 mb-md-30 mb-xs-20">
                         <div class="">
-                            <img src="{{ asset('public/Assets/User/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (1).jpeg') }}"
+                            <img src="{{ asset('assets/user/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (1).jpeg') }}"
                                 alt="gamelist">
                         </div>
                     </div>
@@ -675,7 +675,7 @@
                 <div class="gamelist-item">
                     <div class="gamelist-single-item mb-50 mb-md-30 mb-xs-20">
                         <div class="">
-                            <img src="{{ asset('public/Assets/User/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (1).jpeg') }}"
+                            <img src="{{ asset('assets/user/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (1).jpeg') }}"
                                 alt="gamelist">
                         </div>
                     </div>
@@ -683,7 +683,7 @@
                 <div class="gamelist-item">
                     <div class="gamelist-single-item mb-50 mb-md-30 mb-xs-20">
                         <div class="">
-                            <img src="{{ asset('public/Assets/User/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (1).jpeg') }}"
+                            <img src="{{ asset('assets/user/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (1).jpeg') }}"
                                 alt="gamelist">
                         </div>
                     </div>
@@ -691,7 +691,7 @@
                 <div class="gamelist-item">
                     <div class="gamelist-single-item mb-50 mb-md-30 mb-xs-20">
                         <div class="">
-                            <img src="{{ asset('public/Assets/User/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (1).jpeg') }}"
+                            <img src="{{ asset('assets/user/img/gallery/WhatsApp Image 2026-03-11 at 4.00.10 PM (1).jpeg') }}"
                                 alt="gamelist">
                         </div>
                     </div>
@@ -749,7 +749,7 @@
                     </div>
                 </div>
                 <div class="contact-shape">
-                    <img src="{{ asset('public/Assets/User') }}/img/shape/line-shape.png" alt="shape" title="shape"
+                    <img src="{{ asset('assets/user') }}/img/shape/line-shape.png" alt="shape" title="shape"
                         loading="lazy">
                 </div>
                 <div class="get-in-touch">

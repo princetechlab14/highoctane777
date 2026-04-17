@@ -79,8 +79,8 @@
                                                     <td>{{ $value->location ?? '-' }}</td>
                                                     <td>
                                                         <a target='_blank'
-                                                            href="{{ asset('public/Assets/Admin/images/qrcode/' . $value->qr_code) }}">
-                                                            <img src="{{ asset('public/Assets') }}/Admin/images/qrcode/{{ $value->qr_code }}"
+                                                            href="{{ asset('assets/admin/images/qrcode/' . $value->qr_code) }}">
+                                                            <img src="{{ asset('assets') }}/admin/images/qrcode/{{ $value->qr_code }}"
                                                                 alt="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->qr_code)) }}"
                                                                 title="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->qr_code)) }}"
                                                                 height="80px" loading="lazy">
@@ -88,8 +88,8 @@
                                                     </td>
                                                     <td>
                                                         <a target='_blank'
-                                                            href="{{ asset('public/Assets/Admin/images/store/' . $value->store_image) }}">
-                                                            <img src="{{ asset('public/Assets') }}/Admin/images/store/{{ $value->store_image }}"
+                                                            href="{{ asset('assets/admin/images/store/' . $value->store_image) }}">
+                                                            <img src="{{ asset('assets') }}/admin/images/store/{{ $value->store_image }}"
                                                                 alt="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->store_image)) }}"
                                                                 title="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->store_image)) }}"
                                                                 height="80px" loading="lazy">
@@ -441,7 +441,7 @@
 
             if (staffinput && staffcountryCodeInput) {
                 const popupiti = window.intlTelInput(staffinput, {
-                    utilsScript: "{{ asset('public/Assets') }}/Admin/js/forms/utils.js",
+                    utilsScript: "{{ asset('assets') }}/admin/js/forms/utils.js",
                     initialCountry: "auto",
                     separateDialCode: true,
                     geoIpLookup: function(callback) {
@@ -529,7 +529,7 @@
             const ecountryCodeInput = document.querySelector("#editcountry_code");
             if (einput && ecountryCodeInput) {
                 eiti = window.intlTelInput(einput, {
-                    utilsScript: "{{ asset('public/Assets') }}/Admin/js/forms/utils.js",
+                    utilsScript: "{{ asset('assets') }}/admin/js/forms/utils.js",
                     initialCountry: "auto",
                     separateDialCode: true,
                     geoIpLookup: function(callback) {
@@ -648,9 +648,9 @@
                         let imageUrl = response.store_image && response.store_image !== '' && response
                             .store_image !==
                             null ?
-                            "{{ asset('public/Assets') }}/Admin/images/store/" + response
+                            "{{ asset('assets') }}/admin/images/store/" + response
                             .store_image :
-                            "{{ asset('public/Assets') }}/Admin/images/store/noimage.webp";
+                            "{{ asset('assets') }}/admin/images/store/noimage.webp";
                         $('.storeimage').attr('src', imageUrl);
                     }
                 });

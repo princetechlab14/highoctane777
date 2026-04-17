@@ -6,7 +6,7 @@
                 <div class="col-12 mb-3 d-flex flex-column flex-sm-row align-items-center justify-content-between">
                     <h4 class="text-dark mb-0 text-center text-sm-start">Email Marketing Campaign</h4>
                     <div class="mt-2 mt-sm-0 d-flex flex-column flex-sm-row gap-2">
-                        <a href="{{ asset('public/Assets') }}/Admin/images/email_list.csv" class="btn btn-rounded btn-primary px-4 fs-4"
+                        <a href="{{ asset('assets') }}/admin/images/email_list.csv" class="btn btn-rounded btn-primary px-4 fs-4"
                             download>
                             <i class="ti ti-download fs-4 me-2"></i>Download CSV Formate
                         </a>

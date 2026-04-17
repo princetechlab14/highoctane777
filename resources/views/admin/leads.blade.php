@@ -737,7 +737,7 @@
             const countryCodeInput = document.querySelector("#addcountry_code");
             if (input && countryCodeInput) {
                 const iti = window.intlTelInput(input, {
-                    utilsScript: "{{ asset('public/Assets') }}/Admin/js/forms/utils.js",
+                    utilsScript: "{{ asset('assets') }}/admin/js/forms/utils.js",
                     initialCountry: "auto",
                     separateDialCode: true,
                     geoIpLookup: function(callback) {
@@ -825,7 +825,7 @@
             const ecountryCodeInput = document.querySelector("#editcountry_code");
             if (einput && ecountryCodeInput) {
                 eiti = window.intlTelInput(einput, {
-                    utilsScript: "{{ asset('public/Assets') }}/Admin/js/forms/utils.js",
+                    utilsScript: "{{ asset('assets') }}/admin/js/forms/utils.js",
                     initialCountry: "auto",
                     separateDialCode: true,
                     geoIpLookup: function(callback) {

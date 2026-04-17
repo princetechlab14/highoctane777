@@ -3,7 +3,7 @@
     <!-- Contact Area Start Here -->
     <section class="contact-area s-py-100 position-relative">
         <div class="bg background-img">
-            <img class="left-right" src="{{ asset('Assets') }}/Admin/images/page/{{ $page->image ?? 'noimage.webp' }}"
+            <img class="left-right" src="{{ asset('assets') }}/admin/images/page/{{ $page->image ?? 'noimage.webp' }}"
                 alt="Contact Us" title="Contact Us" loading="lazy">
         </div>
         <div class="container">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <div class="contact-shape">
-                    <img src="{{ asset('public/Assets/User') }}/img/shape/line-shape.png" alt="shape" title="shape" loading="lazy">
+                    <img src="{{ asset('assets/user') }}/img/shape/line-shape.png" alt="shape" title="shape" loading="lazy">
                 </div>
                 <div class="get-in-touch">
                     <div class="contact-title" data-aos="fade-up">

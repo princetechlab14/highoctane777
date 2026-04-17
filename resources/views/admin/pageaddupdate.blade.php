@@ -83,7 +83,7 @@
                                                             data-trigger="fileinput" style="width: 200px; height: 150px;">
                                                             @if (isset($fetchpagedata))
                                                                 <img
-                                                                    src="{{ asset('public/Assets') }}/Admin/images/page/{{ $fetchpagedata->image != '' ? $fetchpagedata->image : 'noimage.webp' }}">
+                                                                    src="{{ asset('assets') }}/admin/images/page/{{ $fetchpagedata->image != '' ? $fetchpagedata->image : 'noimage.webp' }}">
                                                             @endif
                                                         </div>
                                                         <div>
@@ -254,7 +254,7 @@
                                                                                                 data-trigger="fileinput"
                                                                                                 style="width: 200px; height: 150px;">
                                                                                                 <img
-                                                                                                    src="{{ asset('public/Assets/Admin/images/page/' . ($cv->content_image != '' ? $cv->content_image : 'noimage.webp')) }}">
+                                                                                                    src="{{ asset('assets/admin/images/page/' . ($cv->content_image != '' ? $cv->content_image : 'noimage.webp')) }}">
 
                                                                                             </div>
                                                                                             <div>

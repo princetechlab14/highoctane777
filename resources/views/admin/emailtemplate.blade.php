@@ -43,8 +43,8 @@
                                                                 class="d-flex justify-content-center align-items-center flex-wrap">
                                                                 @foreach ($val->attachments as $attachment)
                                                                     <a target='_blank'
-                                                                        href="{{ asset('public/Assets/Admin/images/emailattachment/' . $attachment->attachment) }}">
-                                                                        <img src="{{ asset('public/Assets') }}/Admin/images/emailattachment/{{ $attachment->attachment }}"
+                                                                        href="{{ asset('assets/admin/images/emailattachment/' . $attachment->attachment) }}">
+                                                                        <img src="{{ asset('assets') }}/admin/images/emailattachment/{{ $attachment->attachment }}"
                                                                             width="80" class="pe-2"
                                                                             alt="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $attachment->attachment)) }}"
                                                                             title="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $attachment->attachment)) }}"
@@ -374,7 +374,7 @@
                                                 <a href="javascript:void(0)" class="px-2 btn attachment" aria-label="Close" data="${attachment.id}">
                                                     <i class="ti ti-trash fs-5 text-info"></i>
                                                 </a>
-                                                <a href="{{ asset('public/Assets/Admin/images/emailattachment') }}/${attachment.attachment}" target="_blank" class="px-2 btn">
+                                                <a href="{{ asset('assets/admin/images/emailattachment') }}/${attachment.attachment}" target="_blank" class="px-2 btn">
                                                     <i class="ti ti-eye fs-5 text-info"></i>
                                                 </a>
                                             </div>

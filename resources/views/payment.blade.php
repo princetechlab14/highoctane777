@@ -197,7 +197,7 @@
             const staffcountryCodeInput = document.querySelector("#picountry_code");
             if (staffinput && staffcountryCodeInput) {
                 const popupiti = window.intlTelInput(staffinput, {
-                    utilsScript: "{{ asset('public/Assets') }}/Admin/js/forms/utils.js",
+                    utilsScript: "{{ asset('assets') }}/admin/js/forms/utils.js",
                     initialCountry: "auto",
                     separateDialCode: true,
                     geoIpLookup: function(callback) {

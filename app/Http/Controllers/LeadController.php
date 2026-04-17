@@ -348,7 +348,7 @@ class LeadController extends Controller
         $attach = email_attachment::where('e_id', $data['e_id'])->get();
         $attachment = array();
         foreach ($attach as $v) {
-            array_push($attachment, public_path('Assets/Admin/images/emailattachment/' . $v->url));
+            array_push($attachment, public_path('assets/admin/images/emailattachment/' . $v->url));
         }
         $msg = $template->template;
         $msg = str_replace("{:name:}", $lead->name, $msg);

@@ -208,7 +208,7 @@ class UserController extends Controller
             //         $attach = email_attachment::where('e_id', $email->e_id)->get();
             //         $attachment = array();
             //         foreach ($attach as $v) {
-            //             $attachmentPath = public_path('Assets/Admin/images/emailattachment/' . $v->url);
+            //             $attachmentPath = public_path('assets/admin/images/emailattachment/' . $v->url);
             //             if (file_exists($attachmentPath)) {
             //                 array_push($attachment, $attachmentPath);
             //             }

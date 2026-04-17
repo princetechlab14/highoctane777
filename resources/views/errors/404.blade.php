@@ -5,7 +5,7 @@
         <div class="container">
             <div class="error-wrapper">
                 <div class="error-thumb">
-                    <img src="{{ asset('public/Assets/User') }}/img/thumb/error.png" alt="error">
+                    <img src="{{ asset('assets/user') }}/img/thumb/error.png" alt="error">
                 </div>
                 <div class="error-content">
                     <span>Ooops ! Error</span>

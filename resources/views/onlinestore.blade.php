@@ -35,7 +35,7 @@
                                  <!-- LEFT SIDE : QR + BUTTON -->
                                  <div class="col-md-6 col-lg-5 text-center">
                                      @if ($store->qr_code)
-                                         <img src="{{ asset('public/Assets/Admin/images/qrcode/' . $store->qr_code) }}"
+                                         <img src="{{ asset('assets/admin/images/qrcode/' . $store->qr_code) }}"
                                              alt="{{ $store->name }} QR Code" class="img-fluid rounded" loading="lazy">
 
                                          <p class="fw-semibold mb-2">Scan QR Code</p>
@@ -166,7 +166,7 @@
                      </div>
                  </div>
                  <div class="contact-shape">
-                     <img src="{{ asset('public/Assets/User') }}/img/shape/line-shape.png" alt="shape" title="shape"
+                     <img src="{{ asset('assets/user') }}/img/shape/line-shape.png" alt="shape" title="shape"
                          loading="lazy">
                  </div>
                  <div class="get-in-touch">

@@ -65,8 +65,8 @@
                                                     </td>
                                                     <td>
                                                         <a target='_blank'
-                                                            href="{{ $value->client_image != '' ? asset('public/Assets/Admin/images/testimonials/' . $value->client_image) : asset('public/Assets/Admin/images/testimonials/noimage.webp') }}">
-                                                            <img src="{{ asset('public/Assets') }}/Admin/images/testimonials/thumbnails/{{ $value->client_image != '' ? $value->client_image : 'noimage.webp' }}"
+                                                            href="{{ $value->client_image != '' ? asset('assets/admin/images/testimonials/' . $value->client_image) : asset('admin/images/testimonials/noimage.webp') }}">
+                                                            <img src="{{ asset('assets') }}/admin/images/testimonials/thumbnails/{{ $value->client_image != '' ? $value->client_image : 'noimage.webp' }}"
                                                                 alt="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->client_image != '' ? $value->client_image : 'noimage.webp')) }}"
                                                                 title="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->client_image != '' ? $value->client_image : 'noimage.webp')) }}"
                                                                 height="80px" loading="lazy">
@@ -614,9 +614,9 @@
                 dataType: 'json',
                 success: function(response) {
                     let imageUrl = response.client_image && response.client_image !== '' ?
-                        "{{ asset('public/Assets') }}/Admin/images/testimonials/" + response
+                        "{{ asset('assets') }}/admin/images/testimonials/" + response
                         .client_image :
-                        "{{ asset('public/Assets') }}/Admin/images/testimonials/noimage.webp";
+                        "{{ asset('assets') }}/admin/images/testimonials/noimage.webp";
                     $('.clientimage').attr('src', imageUrl);
 
                     $('#edittestimonialsform input[name="client_name"]').val(response.client_name);

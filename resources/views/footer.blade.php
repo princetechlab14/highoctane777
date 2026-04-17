@@ -7,7 +7,7 @@
 @endphp
 <footer class="footer-area s-py-100 overlay ">
     <div class="bg background-img">
-        <img class="top-bottom" src="{{ asset('public/Assets/User') }}/img/bg/footer-bg.jpg" alt="Footer Img"
+        <img class="top-bottom" src="{{ asset('assets/user') }}/img/bg/footer-bg.jpg" alt="Footer Img"
             title="Footer Img" loading="lazy">
     </div>
     <div class="container">
@@ -15,7 +15,7 @@
             <div class="col-lg-4 col-md-12 col-sm-6 footerlogo">
                 <div class="footer-intro">
                     <div class="logo">
-                        <img src="{{ asset('public/Assets/logo.png') }}" alt="Logo" title="Logo" loading="lazy">
+                        <img src="{{ asset('assets/logo.png') }}" alt="Logo" title="Logo" loading="lazy">
                     </div>
                     @if (isset($websetting->footer_content) && !empty($websetting->footer_content))
                         <p>
@@ -111,7 +111,7 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center mb-3 mb-lg-0 footer-intro  me-0">
                 <div class="logo">
-                    <img src="{{ asset('public/Assets/User') }}/img/logo/logo.svg" alt="logo">
+                    <img src="{{ asset('assets/user') }}/img/logo/logo.svg" alt="logo">
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center gap-3">
@@ -128,12 +128,12 @@
 <!-- Footer Area End Here -->
 
 <!-- Footer script-->
-<script src="{{ asset('public/Assets/User') }}/js/scripts.js"></script>
-<script src="{{ asset('public/Assets/User') }}/js/jquery.validate.min.js"></script>
-<script src="{{ asset('public/Assets/User') }}/js/bootstrap.min.js"></script>
-<script src="{{ asset('public/Assets/User') }}/js/toastr.min.js"></script>
+<script src="{{ asset('assets/user') }}/js/scripts.js"></script>
+<script src="{{ asset('assets/user') }}/js/jquery.validate.min.js"></script>
+<script src="{{ asset('assets/user') }}/js/bootstrap.min.js"></script>
+<script src="{{ asset('assets/user') }}/js/toastr.min.js"></script>
 <!-- intlTelInput -->
-<script src="{{ asset('public/Assets') }}/Admin/js/forms/intlTelInput.min.js"></script>
+<script src="{{ asset('assets') }}/admin/js/forms/intlTelInput.min.js"></script>
 
 <script>
   document.querySelectorAll('.main-menu ul li a').forEach(link => {

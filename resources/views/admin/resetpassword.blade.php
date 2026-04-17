@@ -12,9 +12,9 @@
 
     <!-- Favicon icon-->
     <link rel="shortcut icon" type="image/png"
-        href="{{ asset('public/Assets') }}/{{ isset($websetting->favicon) && $websetting->favicon != '' ? $websetting->favicon : '' }}">
+        href="{{ asset('assets') }}/{{ isset($websetting->favicon) && $websetting->favicon != '' ? $websetting->favicon : '' }}">
     <!-- Core Css -->
-    <link rel="stylesheet" href="{{ asset('public/Assets') }}/Admin/css/styles-1.css">
+    <link rel="stylesheet" href="{{ asset('assets') }}/admin/css/styles-1.css">
     <title>Reset Password</title>
     <style>
         .error {
@@ -37,7 +37,7 @@
 <body>
     <!-- Preloader -->
     <div class="preloader">
-        <img src="{{ asset('public/Assets') }}/{{ $websetting->hlogo ?? '' }}" alt="loader"
+        <img src="{{ asset('assets') }}/{{ $websetting->hlogo ?? '' }}" alt="loader"
             class="lds-ripple img-fluid">
     </div>
     <div id="main-wrapper" class="auth-customizer-none">
@@ -49,9 +49,9 @@
                         <div class="card mb-0">
                             <div class="card-body">
                                 <a class="text-nowrap logo-img text-center d-block mb-5 w-100">
-                                    <img src="{{ asset('public/Assets') }}/{{ $websetting->hlogo ?? '' }}"
+                                    <img src="{{ asset('assets') }}/{{ $websetting->hlogo ?? '' }}"
                                         class="dark-logo w-100" alt="Logo-Dark">
-                                    <img src="{{ asset('public/Assets') }}/{{ $websetting->hlogo ?? '' }}"
+                                    <img src="{{ asset('assets') }}/{{ $websetting->hlogo ?? '' }}"
                                         class="light-logo w-100" alt="Logo-light">
                                 </a>
                                 <form action="{{ url('admin/forgotpassword') }}/{{ $token }}" method="post"
@@ -84,14 +84,14 @@
         </div>
     </div>
     <!-- Import Js Files -->
-    <script src="{{ asset('public/Assets') }}/Admin/js/vendor.min.js"></script>
-    <script src="{{ asset('public/Assets') }}/Admin/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('public/Assets') }}/Admin/libs/simplebar/dist/simplebar.min.js"></script>
-    <script src="{{ asset('public/Assets') }}/Admin/js/theme/app.init.js"></script>
-    <script src="{{ asset('public/Assets') }}/Admin/js/theme/theme.js"></script>
-    <script src="{{ asset('public/Assets') }}/Admin/js/theme/app.min.js"></script>
-    <script src="{{ asset('public/Assets') }}/Admin/js/plugins/toastr-init.js"></script>
-    <script src="{{ asset('public/Assets') }}/Admin/libs/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="{{ asset('assets') }}/admin/js/vendor.min.js"></script>
+    <script src="{{ asset('assets') }}/admin/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets') }}/admin/libs/simplebar/dist/simplebar.min.js"></script>
+    <script src="{{ asset('assets') }}/admin/js/theme/app.init.js"></script>
+    <script src="{{ asset('assets') }}/admin/js/theme/theme.js"></script>
+    <script src="{{ asset('assets') }}/admin/js/theme/app.min.js"></script>
+    <script src="{{ asset('assets') }}/admin/js/plugins/toastr-init.js"></script>
+    <script src="{{ asset('assets') }}/admin/libs/jquery-validation/dist/jquery.validate.min.js"></script>
 
     <script>
         toastr.options = {

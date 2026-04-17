@@ -1,7 +1,7 @@
 @extends('admin.app')
 @section('body')
-    <link rel="stylesheet" href="{{ asset('public/Assets') }}/Admin/libs/codemirror/codemirror.min.css">
-    <link rel="stylesheet" href="{{ asset('public/Assets') }}/Admin/libs/codemirror/darcula.min.css">
+    <link rel="stylesheet" href="{{ asset('assets') }}/admin/libs/codemirror/codemirror.min.css">
+    <link rel="stylesheet" href="{{ asset('assets') }}/admin/libs/codemirror/darcula.min.css">
 
     <div class="body-wrapper">
         <div class="container-fluid">
@@ -37,8 +37,8 @@
 @endsection
 
 @section('script')
-    <script src="{{ asset('public/Assets') }}/Admin/libs/codemirror/codemirror.min.js"></script>
-    <script src="{{ asset('public/Assets') }}/Admin/libs/codemirror/htmlmixed.min.js"></script>
+    <script src="{{ asset('assets') }}/admin/libs/codemirror/codemirror.min.js"></script>
+    <script src="{{ asset('assets') }}/admin/libs/codemirror/htmlmixed.min.js"></script>
 
     <!-- Initialize CodeMirror -->
     <script>

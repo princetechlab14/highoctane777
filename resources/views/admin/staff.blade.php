@@ -107,8 +107,8 @@
                                                     <td>{{ $value->mobile ?? '-' }}</td>
                                                     <td>
                                                         <a target='_blank'
-                                                            href="{{ asset('public/Assets/Admin/images/profile/' . $value->p_image) }}">
-                                                            <img src="{{ asset('public/Assets') }}/Admin/images/profile/{{ $value->p_image }}"
+                                                            href="{{ asset('assets/admin/images/profile/' . $value->p_image) }}">
+                                                            <img src="{{ asset('assets') }}/admin/images/profile/{{ $value->p_image }}"
                                                                 alt="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->p_image)) }}"
                                                                 title="{{ str_replace('-', ' ', preg_replace('/-[a-zA-Z0-9]{10}\.webp$/', '', $value->p_image)) }}"
                                                                 height="80px" loading="lazy">
@@ -517,7 +517,7 @@
 
             if (staffinput && staffcountryCodeInput) {
                 const popupiti = window.intlTelInput(staffinput, {
-                    utilsScript: "{{ asset('public/Assets') }}/Admin/js/forms/utils.js",
+                    utilsScript: "{{ asset('assets') }}/admin/js/forms/utils.js",
                     initialCountry: "auto",
                     separateDialCode: true,
                     geoIpLookup: function(callback) {
@@ -734,7 +734,7 @@
             const ecountryCodeInput = document.querySelector("#editcountry_code");
             if (einput && ecountryCodeInput) {
                 eiti = window.intlTelInput(einput, {
-                    utilsScript: "{{ asset('public/Assets') }}/Admin/js/forms/utils.js",
+                    utilsScript: "{{ asset('assets') }}/admin/js/forms/utils.js",
                     initialCountry: "auto",
                     separateDialCode: true,
                     geoIpLookup: function(callback) {
@@ -1000,9 +1000,9 @@
 
                         let imageUrl = user.p_image && user.p_image !== '' && user.p_image !==
                             null ?
-                            "{{ asset('public/Assets') }}/Admin/images/profile/" + user
+                            "{{ asset('assets') }}/admin/images/profile/" + user
                             .p_image :
-                            "{{ asset('public/Assets') }}/Admin/images/profile/user.webp";
+                            "{{ asset('assets') }}/admin/images/profile/user.webp";
                         $('.profileimage').attr('src', imageUrl);
 
                         // Build permission table

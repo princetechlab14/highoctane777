@@ -198,7 +198,7 @@ class AdminController extends Controller
                 $attach = email_attachment::where('e_id', 2)->get();
                 $attachment = array();
                 foreach ($attach as $v) {
-                    array_push($attachment, public_path('Assets/Admin/images/emailattachment/' . $v->url));
+                    array_push($attachment, public_path('assets/admin/images/emailattachment/' . $v->url));
                 }
                 $msg = $template['template'];
                 $msg = str_replace("{:name:}", $user->name, $msg);
@@ -291,8 +291,8 @@ class AdminController extends Controller
             );
             if ($request->hasFile('p_image')) {
                 if (!empty($user->p_image)) {
-                    $oldImagePath = public_path('/Assets/Admin/images/profile/' . $user->p_image);
-                    $oldThumbnailPath = public_path('/Assets/Admin/images/profile/thumbnails/' . $user->p_image);
+                    $oldImagePath = public_path('/assets/admin/images/profile/' . $user->p_image);
+                    $oldThumbnailPath = public_path('/assets/admin/images/profile/thumbnails/' . $user->p_image);
 
                     // Delete old images if they exist
                     if (file_exists($oldImagePath)) {
@@ -616,7 +616,7 @@ class AdminController extends Controller
         foreach ($files as $field => $filename) {
             if ($request->hasFile($field)) {
                 $file = $request->file($field);
-                $path = public_path('/Assets/');
+                $path = public_path('/assets/');
                 $file->move($path, $filename);
                 $update[$field] = $filename;
             }
@@ -733,7 +733,7 @@ class AdminController extends Controller
         $attachment = email_attachment::find($id);
         if ($attachment) {
             if (!empty($attachment->attachment)) {
-                $filePath = public_path('Assets/Admin/images/emailattachment/' . $attachment->attachment);
+                $filePath = public_path('assets/admin/images/emailattachment/' . $attachment->attachment);
                 if (file_exists($filePath)) {
                     unlink($filePath);
                 }
@@ -994,7 +994,7 @@ class AdminController extends Controller
         $attach = email_attachment::where('e_id', $data['e_id'])->get();
         $attachment = array();
         foreach ($attach as $v) {
-            array_push($attachment, public_path('Assets/Admin/images/emailattachment/' . $v->url));
+            array_push($attachment, public_path('assets/admin/images/emailattachment/' . $v->url));
         }
         $msg = $template->template;
         $msg = str_replace("{:name:}", $lead->name, $msg);
@@ -1213,9 +1213,9 @@ class AdminController extends Controller
             $contents = DB::table('page_content')->where('s_id', $id)->get();
             foreach ($contents as $content) {
                 if ($content->content_image) {
-                    $eventimagePath = public_path('/Assets/Admin/images/event/' . $content->content_image);
-                    $blogimagePath = public_path('/Assets/Admin/images/blog/' . $content->content_image);
-                    $pageImagePath = public_path('/Assets/Admin/images/page/' . $content->content_image);
+                    $eventimagePath = public_path('/assets/admin/images/event/' . $content->content_image);
+                    $blogimagePath = public_path('/assets/admin/images/blog/' . $content->content_image);
+                    $pageImagePath = public_path('/assets/admin/images/page/' . $content->content_image);
 
                     // Check if the file exists and delete it
                     if (file_exists($pageImagePath)) {
@@ -1242,9 +1242,9 @@ class AdminController extends Controller
             $content = DB::table('page_content')->where('id', $id)->first();
 
             if ($content && $content->content_image) {
-                $eventimagePath = public_path('/Assets/Admin/images/event/' . $content->content_image);
-                $blogimagePath = public_path('/Assets/Admin/images/blog/' . $content->content_image);
-                $pageImagePath = public_path('/Assets/Admin/images/page/' . $content->content_image);
+                $eventimagePath = public_path('/assets/admin/images/event/' . $content->content_image);
+                $blogimagePath = public_path('/assets/admin/images/blog/' . $content->content_image);
+                $pageImagePath = public_path('/assets/admin/images/page/' . $content->content_image);
 
                 // Check if the file exists and delete it
                 if (file_exists($pageImagePath)) {
@@ -1272,16 +1272,16 @@ class AdminController extends Controller
 
         $pathMappings = [
             'blog' => [
-                'root' => '/Assets/Admin/images/blog/',
-                'thumbnails' => '/Assets/Admin/images/blog/thumbnails/'
+                'root' => '/assets/admin/images/blog/',
+                'thumbnails' => '/assets/admin/images/blog/thumbnails/'
             ],
             'event' => [
-                'root' => '/Assets/Admin/images/event/',
-                'thumbnails' => '/Assets/Admin/images/event/thumbnails/'
+                'root' => '/assets/admin/images/event/',
+                'thumbnails' => '/assets/admin/images/event/thumbnails/'
             ],
             'page' => [
-                'root' => '/Assets/Admin/images/page/',
-                'thumbnails' => '/Assets/Admin/images/page/thumbnails/'
+                'root' => '/assets/admin/images/page/',
+                'thumbnails' => '/assets/admin/images/page/thumbnails/'
             ],
         ];
 
@@ -1354,16 +1354,16 @@ class AdminController extends Controller
 
         $pathMappings = [
             'blog' => [
-                'root' => '/Assets/Admin/images/blog/',
-                'thumbnails' => '/Assets/Admin/images/blog/thumbnails/'
+                'root' => '/assets/admin/images/blog/',
+                'thumbnails' => '/assets/admin/images/blog/thumbnails/'
             ],
             'event' => [
-                'root' => '/Assets/Admin/images/event/',
-                'thumbnails' => '/Assets/Admin/images/event/thumbnails/'
+                'root' => '/assets/admin/images/event/',
+                'thumbnails' => '/assets/admin/images/event/thumbnails/'
             ],
             'page' => [
-                'root' => '/Assets/Admin/images/page/',
-                'thumbnails' => '/Assets/Admin/images/page/thumbnails/'
+                'root' => '/assets/admin/images/page/',
+                'thumbnails' => '/assets/admin/images/page/thumbnails/'
             ],
         ];
 
@@ -1483,8 +1483,8 @@ class AdminController extends Controller
             if (isset($gallery[0])) {
                 $newImage = $gallery[0];
                 if (!empty($galleryRecord->g_image)) {
-                    $oldImagePath = public_path('/Assets/Admin/images/gallery/' . $galleryRecord->g_image);
-                    $oldThumbnailPath = public_path('/Assets/Admin/images/gallery/thumbnails/' . $galleryRecord->g_image);
+                    $oldImagePath = public_path('/assets/admin/images/gallery/' . $galleryRecord->g_image);
+                    $oldThumbnailPath = public_path('/assets/admin/images/gallery/thumbnails/' . $galleryRecord->g_image);
 
                     if (file_exists($oldImagePath)) {
                         unlink($oldImagePath);
@@ -1577,8 +1577,8 @@ class AdminController extends Controller
             if (isset($slider[0])) {
                 $newImage = $slider[0];
                 if (!empty($sliderRecord->banner_image)) {
-                    $oldImagePath = public_path('/Assets/Admin/images/slider/' . $sliderRecord->banner_image);
-                    $oldThumbnailPath = public_path('/Assets/Admin/images/slider/thumbnails/' . $sliderRecord->banner_image);
+                    $oldImagePath = public_path('/assets/admin/images/slider/' . $sliderRecord->banner_image);
+                    $oldThumbnailPath = public_path('/assets/admin/images/slider/thumbnails/' . $sliderRecord->banner_image);
 
                     // Delete old images if they exist
                     if (file_exists($oldImagePath)) {
@@ -1673,8 +1673,8 @@ class AdminController extends Controller
             if (isset($category[0])) {
                 $newImage = $category[0];
                 if (!empty($categoryRecord->category_image)) {
-                    $oldImagePath = public_path('/Assets/Admin/images/category/' . $categoryRecord->category_image);
-                    $oldThumbnailPath = public_path('/Assets/Admin/images/category/thumbnails/' . $categoryRecord->category_image);
+                    $oldImagePath = public_path('/assets/admin/images/category/' . $categoryRecord->category_image);
+                    $oldThumbnailPath = public_path('/assets/admin/images/category/thumbnails/' . $categoryRecord->category_image);
 
                     // Delete old images if they exist
                     if (file_exists($oldImagePath)) {
@@ -1723,11 +1723,11 @@ class AdminController extends Controller
         // If no subcategories, proceed with deletion
         $category = category::find($categoryId);
         if ($category) {
-            if (!empty($category->category_image) && file_exists(public_path('Assets/Admin/images/category/' . $category->category_image))) {
-                unlink(public_path('Assets/Admin/images/category/' . $category->category_image));
+            if (!empty($category->category_image) && file_exists(public_path('assets/admin/images/category/' . $category->category_image))) {
+                unlink(public_path('assets/admin/images/category/' . $category->category_image));
             }
-            if (!empty($category->category_image) && file_exists(public_path('Assets/Admin/images/category/thumbnails/' . $category->category_image))) {
-                unlink(public_path('Assets/Admin/images/category/thumbnails/' . $category->category_image));
+            if (!empty($category->category_image) && file_exists(public_path('assets/admin/images/category/thumbnails/' . $category->category_image))) {
+                unlink(public_path('assets/admin/images/category/thumbnails/' . $category->category_image));
             }
             $category->delete();
 
@@ -1768,12 +1768,12 @@ class AdminController extends Controller
         foreach ($categoryIds as $categoryId) {
             $category = category::find($categoryId);
             if ($category) {
-                if (!empty($category->category_image) && file_exists(public_path('Assets/Admin/images/category/' . $category->category_image))) {
-                    unlink(public_path('Assets/Admin/images/category/' . $category->category_image));
+                if (!empty($category->category_image) && file_exists(public_path('assets/admin/images/category/' . $category->category_image))) {
+                    unlink(public_path('assets/admin/images/category/' . $category->category_image));
                 }
 
-                if (!empty($category->category_image) && file_exists(public_path('Assets/Admin/images/category/thumbnails/' . $category->category_image))) {
-                    unlink(public_path('Assets/Admin/images/category/thumbnails/' . $category->category_image));
+                if (!empty($category->category_image) && file_exists(public_path('assets/admin/images/category/thumbnails/' . $category->category_image))) {
+                    unlink(public_path('assets/admin/images/category/thumbnails/' . $category->category_image));
                 }
 
                 $category->delete();
@@ -1885,8 +1885,8 @@ class AdminController extends Controller
             if (isset($testimonials[0])) {
                 $newImage = $testimonials[0];
                 if (!empty($testimonialsRecord->client_image)) {
-                    $oldImagePath = public_path('/Assets/Admin/images/testimonials/' . $testimonialsRecord->client_image);
-                    $oldThumbnailPath = public_path('/Assets/Admin/images/testimonials/thumbnails/' . $testimonialsRecord->client_image);
+                    $oldImagePath = public_path('assets/admin/images/testimonials/' . $testimonialsRecord->client_image);
+                    $oldThumbnailPath = public_path('assets/admin/images/testimonials/thumbnails/' . $testimonialsRecord->client_image);
 
                     // Delete old images if they exist
                     if (file_exists($oldImagePath)) {
@@ -2409,7 +2409,7 @@ class AdminController extends Controller
             $slug = strtolower(preg_replace('/[^A-Za-z0-9]+/', '_', $request->name));
             $fileName = $slug . '_' . $store->id . '.png';
 
-            // $qrPath = public_path('Assets/Admin/images/qrcode/');
+            // $qrPath = public_path('assets/admin/images/qrcode/');
             // if (!File::exists($qrPath)) {
             //     File::makeDirectory($qrPath, 0755, true);
             // }
@@ -2422,7 +2422,7 @@ class AdminController extends Controller
             //     ->build();
             // $result->saveToFile($qrPath . $fileName);
 
-            $qrPath = public_path('Assets/Admin/images/qrcode/');
+            $qrPath = public_path('assets/admin/images/qrcode/');
             if (!File::exists($qrPath)) {
                 File::makeDirectory($qrPath, 0755, true);
             }
@@ -2525,8 +2525,8 @@ class AdminController extends Controller
             if (isset($store[0])) {
                 $newImage = $store[0];
                 if (!empty($storesRecord->store_image)) {
-                    $oldImagePath = public_path('/Assets/Admin/images/store/' . $storesRecord->store_image);
-                    $oldThumbnailPath = public_path('/Assets/Admin/images/store/thumbnails/' . $storesRecord->store_image);
+                    $oldImagePath = public_path('/assets/admin/images/store/' . $storesRecord->store_image);
+                    $oldThumbnailPath = public_path('/assets/admin/images/store/thumbnails/' . $storesRecord->store_image);
 
                     // Delete old images if they exist
                     if (file_exists($oldImagePath)) {
@@ -2548,7 +2548,7 @@ class AdminController extends Controller
             ===================================================
             */
             if ($oldName !== $request->name) {
-                $qrPath = public_path('Assets/Admin/images/qrcode/');
+                $qrPath = public_path('assets/admin/images/qrcode/');
 
                 // Delete old QR
                 if ($storesRecord->qr_code && file_exists($qrPath . $storesRecord->qr_code)) {
@@ -2821,7 +2821,7 @@ class AdminController extends Controller
                 $value->name ?? '',
                 $value->email ?? '',
                 '+'. $value->country_code . ' ' . $value->mobile ?? '-',
-                $value->p_image ? '<img src="' . asset('public/Assets/Admin/images/profile/' . $value->p_image) . '" alt="Profile Image" height="50px">' : '-',
+                $value->p_image ? '<img src="' . asset('assets/admin/images/profile/' . $value->p_image) . '" alt="Profile Image" height="50px">' : '-',
                 $value->address ?? '-',
                 $value->roles->name ?? '-',
                 $value->stores->name ?? '-',
@@ -2952,8 +2952,8 @@ class AdminController extends Controller
             if (isset($profile[0])) {
                 $newImage = $profile[0];
                 if (!empty($user->p_image)) {
-                    $oldImagePath = public_path('/Assets/Admin/images/profile/' . $user->p_image);
-                    $oldThumbnailPath = public_path('/Assets/Admin/images/profile/thumbnails/' . $user->p_image);
+                    $oldImagePath = public_path('/assets/admin/images/profile/' . $user->p_image);
+                    $oldThumbnailPath = public_path('/assets/admin/images/profile/thumbnails/' . $user->p_image);
 
                     // Delete old images if they exist
                     if (file_exists($oldImagePath)) {
@@ -3355,12 +3355,12 @@ class AdminController extends Controller
         $pdf = PDF::loadView('admin.printstorereport', $data)
                 ->setPaper('a4', 'landscape');
 
-        $path = public_path('Assets/User/report');
+        $path = public_path('assets/user/report');
         $fileName = 'Store Report.pdf';
 
         $pdf->save($path . '/' . $fileName);
 
-        $output['url'] = asset('public/Assets/User/report') . '/' . $fileName;
+        $output['url'] = asset('assets/user/report') . '/' . $fileName;
         $output['filename'] = $fileName;
 
         return response()->json($output);
@@ -4033,12 +4033,12 @@ class AdminController extends Controller
     //         'margin-right' => 0,
     //     ]);
 
-    //     $path = public_path('Assets/User/report');
+    //     $path = public_path('assets/user/report');
     //     $fileName = 'Staff_Report_' . $user->id . '_' . date('Ymd_His') . '.pdf';
 
     //     $pdf->save($path . '/' . $fileName);
 
-    //     $output['url'] = asset('public/Assets/User/report') . '/' . $fileName;
+    //     $output['url'] = asset('/assetsuser/report') . '/' . $fileName;
     //     $output['filename'] = $fileName;
 
     //     return response()->json($output);
@@ -4239,13 +4239,13 @@ class AdminController extends Controller
             'margin-right' => 0,
         ]);
 
-        $path = public_path('Assets/User/report');
+        $path = public_path('assets/user/report');
         $fileName = 'Staff_Report_' . $user->id . '_' . date('Ymd_His') . '.pdf';
 
         $pdf->save($path . '/' . $fileName);
 
         return response()->json([
-            'url' => asset('public/Assets/User/report') . '/' . $fileName,
+            'url' => asset('assets/user/report') . '/' . $fileName,
             'filename' => $fileName
         ]);
     }
@@ -4364,13 +4364,13 @@ class AdminController extends Controller
     //         'margin-right'  => 5,
     //     ]);
 
-    //     $path = public_path('Assets/User/staff_shift_report');
+    //     $path = public_path('assets/user/staff_shift_report');
     //     $fileName = 'Staff_Shift_Report_' . $user->id . '_' . date('Y-m-d_His') . '.pdf';
 
     //     $pdf->save($path . '/' . $fileName);
 
     //     return response()->json([
-    //         'url' => asset('public/Assets/User/staff_shift_report/'.$fileName),
+    //         'url' => asset('/assets/user/staff_shift_report/'.$fileName),
     //         'filename' => $fileName
     //     ]);
     // }
@@ -4659,7 +4659,7 @@ class AdminController extends Controller
         // Prepare the attachment file paths
         $attachments = [];
         foreach ($template_attachments as $attval) {
-            $attachments[] = asset('public/Assets/Admin/images/emailattachment/' . $attval->attachment);
+            $attachments[] = asset('assets/admin/images/emailattachment/' . $attval->attachment);
         }
 
         // Loop through each email and use the emailsend function
@@ -4682,20 +4682,20 @@ class AdminController extends Controller
 
     //     $pathMappings = [
     //         'email_attachment' => [
-    //             'root' => '/Assets/Admin/images/emailattachment/',
-    //             'thumbnails' => '/Assets/Admin/images/emailattachment/thumbnails/'
+    //             'root' => '/assets/admin/images/emailattachment/',
+    //             'thumbnails' => '/assets/admin/images/emailattachment/thumbnails/'
     //         ],
     //         'gallery' => [
-    //             'root' => '/Assets/Admin/images/gallery/',
-    //             'thumbnails' => '/Assets/Admin/images/gallery/thumbnails/'
+    //             'root' => '/assets/admin/images/gallery/',
+    //             'thumbnails' => '/assets/admin/images/gallery/thumbnails/'
     //         ],
     //         'slider' => [
-    //             'root' => '/Assets/Admin/images/slider/',
-    //             'thumbnails' => '/Assets/Admin/images/slider/thumbnails/'
+    //             'root' => '/assets/admin/images/slider/',
+    //             'thumbnails' => '/assets/admin/images/slider/thumbnails/'
     //         ],
     //         'testimonials' => [
-    //             'root' => '/Assets/Admin/images/testimonials/',
-    //             'thumbnails' => '/Assets/Admin/images/testimonials/thumbnails/'
+    //             'root' => '/assets/admin/images/testimonials/',
+    //             'thumbnails' => '/assets/admin/images/testimonials/thumbnails/'
     //         ],
     //     ];
 
@@ -4839,28 +4839,28 @@ class AdminController extends Controller
         
         $pathMappings = [
             'email_attachment' => [
-                'root' => '/Assets/Admin/images/emailattachment/',
-                'thumbnails' => '/Assets/Admin/images/emailattachment/thumbnails/'
+                'root' => '/assets/admin/images/emailattachment/',
+                'thumbnails' => '/assets/admin/images/emailattachment/thumbnails/'
             ],
             'gallery' => [
-                'root' => '/Assets/Admin/images/gallery/',
-                'thumbnails' => '/Assets/Admin/images/gallery/thumbnails/'
+                'root' => '/assets/admin/images/gallery/',
+                'thumbnails' => '/assets/admin/images/gallery/thumbnails/'
             ],
             'slider' => [
-                'root' => '/Assets/Admin/images/slider/',
-                'thumbnails' => '/Assets/Admin/images/slider/thumbnails/'
+                'root' => '/assets/admin/images/slider/',
+                'thumbnails' => '/assets/admin/images/slider/thumbnails/'
             ],
             'testimonials' => [
-                'root' => '/Assets/Admin/images/testimonials/',
-                'thumbnails' => '/Assets/Admin/images/testimonials/thumbnails/'
+                'root' => '/assets/admin/images/testimonials/',
+                'thumbnails' => '/assets/admin/images/testimonials/thumbnails/'
             ],
             'user' => [
-                'root' => '/Assets/Admin/images/profile/',
-                'thumbnails' => '/Assets/Admin/images/profile/thumbnails/'
+                'root' => '/assets/admin/images/profile/',
+                'thumbnails' => '/assets/admin/images/profile/thumbnails/'
             ],
             'stores' => [
-                'root' => '/Assets/Admin/images/store/',
-                'thumbnails' => '/Assets/Admin/images/store/thumbnails/'
+                'root' => '/assets/admin/images/store/',
+                'thumbnails' => '/assets/admin/images/store/thumbnails/'
             ],
         ];
 
@@ -4927,7 +4927,7 @@ class AdminController extends Controller
                 // Unlink QR code image if exists
                 $store = DB::table('stores')->where('id', $id)->first();
                 if ($store && !empty($store->qr_code)) {
-                    $qrPath = public_path('Assets/Admin/images/qrcode/' . $store->qr_code);
+                    $qrPath = public_path('assets/admin/images/qrcode/' . $store->qr_code);
                     if (file_exists($qrPath)) {
                         unlink($qrPath);
                     }
@@ -5046,28 +5046,28 @@ class AdminController extends Controller
 
         $pathMappings = [
             'email_attachment' => [
-                'root' => '/Assets/Admin/images/emailattachment/',
-                'thumbnails' => '/Assets/Admin/images/emailattachment/thumbnails/'
+                'root' => '/assets/admin/images/emailattachment/',
+                'thumbnails' => '/assets/admin/images/emailattachment/thumbnails/'
             ],
             'gallery' => [
-                'root' => '/Assets/Admin/images/gallery/',
-                'thumbnails' => '/Assets/Admin/images/gallery/thumbnails/'
+                'root' => '/assets/admin/images/gallery/',
+                'thumbnails' => '/assets/admin/images/gallery/thumbnails/'
             ],
             'slider' => [
-                'root' => '/Assets/Admin/images/slider/',
-                'thumbnails' => '/Assets/Admin/images/slider/thumbnails/'
+                'root' => '/assets/admin/images/slider/',
+                'thumbnails' => '/assets/admin/images/slider/thumbnails/'
             ],
             'testimonials' => [
-                'root' => '/Assets/Admin/images/testimonials/',
-                'thumbnails' => '/Assets/Admin/images/testimonials/thumbnails/'
+                'root' => '/assets/admin/images/testimonials/',
+                'thumbnails' => '/assets/admin/images/testimonials/thumbnails/'
             ],
             'user' => [
-                'root' => '/Assets/Admin/images/profile/',
-                'thumbnails' => '/Assets/Admin/images/profile/thumbnails/'
+                'root' => '/assets/admin/images/profile/',
+                'thumbnails' => '/assets/admin/images/profile/thumbnails/'
             ],
             'stores' => [
-                'root' => '/Assets/Admin/images/store/',
-                'thumbnails' => '/Assets/Admin/images/store/thumbnails/'
+                'root' => '/assets/admin/images/store/',
+                'thumbnails' => '/assets/admin/images/store/thumbnails/'
             ],
         ];
 
@@ -5152,7 +5152,7 @@ class AdminController extends Controller
                     // Unlink QR code image if exists
                     $store = DB::table('stores')->where('id', $id)->first();
                     if ($store && !empty($store->qr_code)) {
-                        $qrPath = public_path('Assets/Admin/images/qrcode/' . $store->qr_code);
+                        $qrPath = public_path('assets/admin/images/qrcode/' . $store->qr_code);
                         if (file_exists($qrPath)) {
                             unlink($qrPath);
                         }
@@ -5225,20 +5225,20 @@ class AdminController extends Controller
 
     //     $pathMappings = [
     //         'email_attachment' => [
-    //             'root' => '/Assets/Admin/images/emailattachment/',
-    //             'thumbnails' => '/Assets/Admin/images/emailattachment/thumbnails/'
+    //             'root' => '/assets/admin/images/emailattachment/',
+    //             'thumbnails' => '/assets/admin/images/emailattachment/thumbnails/'
     //         ],
     //         'gallery' => [
-    //             'root' => '/Assets/Admin/images/gallery/',
-    //             'thumbnails' => '/Assets/Admin/images/gallery/thumbnails/'
+    //             'root' => '/assets/admin/images/gallery/',
+    //             'thumbnails' => '/assets/admin/images/gallery/thumbnails/'
     //         ],
     //         'slider' => [
-    //             'root' => '/Assets/Admin/images/slider/',
-    //             'thumbnails' => '/Assets/Admin/images/slider/thumbnails/'
+    //             'root' => '/assets/admin/images/slider/',
+    //             'thumbnails' => '/assets/admin/images/slider/thumbnails/'
     //         ],
     //         'testimonials' => [
-    //             'root' => '/Assets/Admin/images/testimonials/',
-    //             'thumbnails' => '/Assets/Admin/images/testimonials/thumbnails/'
+    //             'root' => '/assets/admin/images/testimonials/',
+    //             'thumbnails' => '/assets/admin/images/testimonials/thumbnails/'
     //         ],
     //     ];
 
@@ -5346,7 +5346,7 @@ class AdminController extends Controller
         if ($thumbnail == 1) {
             if ($request->hasFile($name)) {
                 $img = $request->file($name);
-                $destinationPath = public_path('/Assets/Admin/' . $path . '/thumbnails');
+                $destinationPath = public_path('/assets/admin/' . $path . '/thumbnails');
                 if (is_array($img)) {
                     foreach ($img as $key => $val1) {
                         if (is_array($val1) && count($val1) > 0) {
@@ -5381,7 +5381,7 @@ class AdminController extends Controller
             $file = [];
             $image = $request->file($name);
             if (is_array($image)) {
-                $path = public_path('/Assets/Admin/' . $path);
+                $path = public_path('/assets/admin/' . $path);
                 foreach ($image as $key => $val) {
                     if (is_array($val) && count($val) > 0) {
                         foreach ($val as $vk => $vv) {
@@ -5400,7 +5400,7 @@ class AdminController extends Controller
                     }
                 }
             } else {
-                $path = public_path('/Assets/Admin/' . $path);
+                $path = public_path('/assets/admin/' . $path);
                 $filename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME) . "_" . $randString . ".webp";
                 $filename = preg_replace('/[^a-z0-9\.]/i', "-", $filename);
                 $filename = str_replace(' ', '-', $filename);

@@ -28,12 +28,12 @@
     <meta property="og:description" content="{{ $meta->meta_description ?? 'High Octane' }}">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:site_name" content="High Octane">
-    <meta property="og:image" content="{{ $meta->og_image ?? asset('public/Assets/logo.png') }}">
+    <meta property="og:image" content="{{ $meta->og_image ?? asset('assets/logo.png') }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $meta->meta_title ?? 'High Octane' }}">
     <meta name="twitter:description" content="{{ $meta->meta_description ?? 'High Octane' }}">
-    <meta name="twitter:image" content="{{ $meta->og_image ?? asset('public/Assets/logo.png') }}">
+    <meta name="twitter:image" content="{{ $meta->og_image ?? asset('assets/logo.png') }}">
     <meta name="twitter:url" content="{{ url()->current() }}">
     <!-- 👍 OG & Twitter Added -->
 
@@ -57,15 +57,15 @@
         </script>
     @endif
 
-    <link rel="icon" href="{{ asset('public/Assets') }}/favicon.png" type="image/gif" sizes="16x16">
-    <link rel="stylesheet" href="{{ asset('public/Assets/User') }}/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ asset('public/Assets/User') }}/css/plugin.css">
-    <link rel="stylesheet" href="{{ asset('public/Assets/User') }}/css/components.css">
-    <link rel="stylesheet" href="{{ asset('public/Assets/User') }}/css/style.css">
-    <link rel="stylesheet" href="{{ asset('public/Assets/User') }}/css/custom.css" />
-    <link rel="stylesheet" href="{{ asset('public/Assets/User') }}/css/toastr.min.css" />
+    <link rel="icon" href="{{ asset('assets') }}/favicon.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="{{ asset('assets/user') }}/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/user') }}/css/plugin.css">
+    <link rel="stylesheet" href="{{ asset('assets/user') }}/css/components.css">
+    <link rel="stylesheet" href="{{ asset('assets/user') }}/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets/user') }}/css/custom.css" />
+    <link rel="stylesheet" href="{{ asset('assets/user') }}/css/toastr.min.css" />
     <!-- intlTelInput -->
-    <link rel="stylesheet" href="{{ asset('public/Assets') }}/Admin/css/intlTelInput.css">
+    <link rel="stylesheet" href="{{ asset('assets') }}/admin/css/intlTelInput.css">
 
 </head>
 
@@ -76,7 +76,7 @@
             <div class="header-wrapper">
                 <div class="logo">
                     <a href="{{ url('/') }}">
-                        <img src="{{ asset('public/Assets/logo.png') }}" alt="Logo" title="Logo" loading="lazy">
+                        <img src="{{ asset('assets/logo.png') }}" alt="Logo" title="Logo" loading="lazy">
                     </a>
                 </div>
                 <div class="main-menu">

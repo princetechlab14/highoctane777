@@ -14,32 +14,32 @@
 
     <!-- Favicon icon-->
     <link rel="shortcut icon" type="image/png"
-        href="{{ asset('public/Assets') }}/{{ isset($websetting->favicon) && $websetting->favicon != '' ? $websetting->favicon : '' }}" />
+        href="{{ asset('assets') }}/{{ isset($websetting->favicon) && $websetting->favicon != '' ? $websetting->favicon : '' }}" />
     <!-- Core Css -->
-    <link rel="stylesheet" href="{{ asset('public/Assets') }}/Admin/css/styles.css" />
-    <link rel="stylesheet" href="{{ asset('public/Assets') }}/Admin/css/custom.css" />
+    <link rel="stylesheet" href="{{ asset('assets') }}/admin/css/styles.css" />
+    <link rel="stylesheet" href="{{ asset('assets') }}/admin/css/custom.css" />
     <!-- datatable CSS -->
-    <link rel="stylesheet" href="{{ asset('public/Assets') }}/Admin/libs/datatable/css/datatables.min.css">
+    <link rel="stylesheet" href="{{ asset('assets') }}/admin/libs/datatable/css/datatables.min.css">
     <!-- datepicker  -->
     <link rel="stylesheet" type="text/css"
-        href="{{ asset('public/Assets') }}/Admin/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
-    <link rel="stylesheet" href="{{ asset('public/Assets') }}/Admin/libs/daterangepicker/daterangepicker.css">
+        href="{{ asset('assets') }}/admin/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="{{ asset('assets') }}/admin/libs/daterangepicker/daterangepicker.css">
     <!-- fileinput  -->
-    <link href="{{ asset('public/Assets') }}/Admin/libs/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet"
+    <link href="{{ asset('assets') }}/admin/libs/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet"
         type="text/css" />
     <!-- sweetalert  -->
-    <link rel="stylesheet" href="{{ asset('public/Assets') }}/Admin/libs/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="{{ asset('assets') }}/admin/libs/sweetalert2/dist/sweetalert2.min.css">
     <!-- select2  -->
-    <link rel="stylesheet" href="{{ asset('public/Assets') }}/Admin/libs/select2/css/select2.min.css" />
+    <link rel="stylesheet" href="{{ asset('assets') }}/admin/libs/select2/css/select2.min.css" />
     <!-- intlTelInput -->
-    <link rel="stylesheet" href="{{ asset('public/Assets') }}/Admin/css/intlTelInput.css">
+    <link rel="stylesheet" href="{{ asset('assets') }}/admin/css/intlTelInput.css">
 
 </head>
 
 <body>
     <!-- Preloader -->
     <div class="preloader">
-        <img src="{{ isset($websetting->favicon) && $websetting->favicon != '' ? asset('public/Assets/' . $websetting->favicon) : '' }}"
+        <img src="{{ isset($websetting->favicon) && $websetting->favicon != '' ? asset('assets/' . $websetting->favicon) : '' }}"
             alt="{{ isset($websetting->favicon) && $websetting->favicon != '' ? str_replace('_', '-', substr($websetting->favicon, 0, strpos($websetting->favicon, '.'))) : '' }}"
             title="{{ isset($websetting->favicon) && $websetting->favicon != '' ? str_replace('_', '-', substr($websetting->favicon, 0, strpos($websetting->favicon, '.'))) : '' }}"
             class="lds-ripple img-fluid" />
@@ -52,7 +52,7 @@
                 {{-- logo  --}}
                 <div class="brand-logo d-flex align-items-center justify-content-center">
                     <a href="{{ url('/admin') }}" class="text-nowrap logo-img">
-                        <img src="{{ asset('public/Assets') }}/{{ $websetting->hlogo ?? '' }}"
+                        <img src="{{ asset('assets') }}/{{ $websetting->hlogo ?? '' }}"
                             alt="{{ isset($websetting->hlogo) && $websetting->hlogo != '' ? str_replace('_', '-', substr($websetting->hlogo, 0, strpos($websetting->hlogo, '.'))) : '' }}"
                             title="{{ isset($websetting->hlogo) && $websetting->hlogo != '' ? str_replace('_', '-', substr($websetting->hlogo, 0, strpos($websetting->hlogo, '.'))) : '' }}"
                             class="w-100">
@@ -345,7 +345,7 @@
 
                         <div class="d-block d-lg-none py-4">
                             <a href="{{ url('/admin') }}" class="text-nowrap logo-img">
-                                <img src="{{ asset('public/Assets') }}/{{ $websetting->hlogo ?? '' }}"
+                                <img src="{{ asset('assets') }}/{{ $websetting->hlogo ?? '' }}"
                                     alt="{{ isset($websetting->hlogo) && $websetting->hlogo != '' ? str_replace('_', '-', substr($websetting->hlogo, 0, strpos($websetting->hlogo, '.'))) : '' }}"
                                     title="{{ isset($websetting->hlogo) && $websetting->hlogo != '' ? str_replace('_', '-', substr($websetting->hlogo, 0, strpos($websetting->hlogo, '.'))) : '' }}"
                                     class="w-100">
@@ -381,7 +381,7 @@
                                                         <a href="javascript:void(0)"
                                                             class="py-6 px-7 d-flex align-items-center dropdown-item">
                                                             <span class="me-3">
-                                                                <img src="{{ asset('public/Assets') }}/Admin/images/trend.png"
+                                                                <img src="{{ asset('assets') }}/admin/images/trend.png"
                                                                     alt="New Lead" title="New Lead" />
                                                             </span>
                                                             <div class="w-100">
@@ -421,7 +421,7 @@
                                             aria-expanded="false">
                                             <div class="d-flex align-items-center">
                                                 <div class="user-profile-img">
-                                                    <img src="{{ asset('public/Assets') }}/Admin/images/profile/{{ $user->p_image ? $user->p_image : 'user.webp' }}"
+                                                    <img src="{{ asset('assets') }}/admin/images/profile/{{ $user->p_image ? $user->p_image : 'user.webp' }}"
                                                         class="rounded-circle" width="35" height="35"
                                                         alt="Profile" title="Profile">
                                                 </div>
@@ -434,7 +434,7 @@
                                                     <h5 class="mb-0 fs-5 fw-semibold">User Profile</h5>
                                                 </div>
                                                 <div class="d-flex align-items-center py-9 mx-7 border-bottom">
-                                                    <img src="{{ asset('public/Assets') }}/Admin/images/profile/{{ $user->p_image ? $user->p_image : 'user.webp' }}"
+                                                    <img src="{{ asset('assets') }}/admin/images/profile/{{ $user->p_image ? $user->p_image : 'user.webp' }}"
                                                         class="rounded-circle" width="80" height="80"
                                                         alt="Profile" title="Profile">
                                                     <div class="ms-3">
@@ -451,7 +451,7 @@
                                                         class="py-8 px-7 mt-8 d-flex align-items-center">
                                                         <span
                                                             class="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
-                                                            <img src="{{ asset('public/Assets') }}/Admin/images/svgs/icon-account.svg"
+                                                            <img src="{{ asset('assets') }}/admin/images/svgs/icon-account.svg"
                                                                 alt="Account" title="Account" width="24"
                                                                 height="24">
                                                         </span>
@@ -485,7 +485,7 @@
                         aria-labelledby="offcanvasWithBothOptionsLabel">
                         <nav class="sidebar-nav scroll-sidebar">
                             <div class="offcanvas-header justify-content-between">
-                                <img src="{{ isset($websetting->favicon) && $websetting->favicon != '' ? asset('public/Assets/' . $websetting->favicon) : '' }}"
+                                <img src="{{ isset($websetting->favicon) && $websetting->favicon != '' ? asset('assets/' . $websetting->favicon) : '' }}"
                                     alt="{{ isset($websetting->favicon) && $websetting->favicon != '' ? str_replace('_', '-', substr($websetting->favicon, 0, strpos($websetting->favicon, '.'))) : '' }}"
                                     title="{{ isset($websetting->favicon) && $websetting->favicon != '' ? str_replace('_', '-', substr($websetting->favicon, 0, strpos($websetting->favicon, '.'))) : '' }}"
                                     class="img-fluid" />
